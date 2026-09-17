@@ -1,0 +1,13 @@
+path: C:/downloads/RFDD_YOLO
+
+train: images/train
+val: images/val
+test: images/test
+
+names:
+  0: Deformed
+  1: Fractured
+  2: Missing
+  3: Inverted
+  4: Normal
+  5: Displaced

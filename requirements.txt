@@ -1,0 +1,5 @@
+ultralytics==8.4.148
+opencv-python
+numpy
+Pillow
+h5py
