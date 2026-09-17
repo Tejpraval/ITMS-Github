@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Indigenous ITMS | Railway Track Monitoring</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        header {
+            padding: 70px 0 50px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        header p {
+            font-size: 18px;
+            color: #94a3b8;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .badge {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 7px 14px;
+            border: 1px solid #475569;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+
+        section {
+            margin: 35px 0;
+        }
+
+        .card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            margin-bottom: 15px;
+            font-size: 26px;
+        }
+
+        h3 {
+            margin-bottom: 10px;
+        }
+
+        .pipeline {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .pipeline div {
+            background: #0f172a;
+            padding: 18px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #334155;
+        }
+
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+        }
+
+        .metric {
+            text-align: center;
+            background: #0f172a;
+            padding: 20px;
+            border-radius: 10px;
+            border: 1px solid #334155;
+        }
+
+        .metric strong {
+            display: block;
+            font-size: 30px;
+            margin-bottom: 5px;
+        }
+
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .links a {
+            text-decoration: none;
+            padding: 12px 18px;
+            border-radius: 8px;
+            background: #334155;
+            color: white;
+        }
+
+        .links a:hover {
+            background: #475569;
+        }
+
+        ul {
+            margin-left: 22px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        .note {
+            color: #94a3b8;
+            font-size: 14px;
+            margin-top: 12px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+
+        <div class="badge">
+            CSE 471 · Deep Learning for Computer Vision
+        </div>
+
+        <h1>Indigenous Contactless Integrated Track Monitoring System</h1>
+
+        <p>
+            A computer-vision prototype for automated railway fastener
+            detection, defect classification, and track inspection recording
+            using YOLO26n and the RFDD dataset.
+        </p>
+
+    </div>
+</header>
+
+
+<main class="container">
+
+    <section>
+        <div class="card">
+            <h2>Project Overview</h2>
+
+            <p>
+                This project demonstrates a software-based railway track
+                inspection pipeline inspired by the concept of Integrated
+                Track Monitoring Systems (ITMS). Railway track images are
+                processed using a deep-learning object detection model to
+                identify fasteners and classify their condition.
+            </p>
+
+            <p class="note">
+                This is an experimental computer-vision prototype and is not
+                intended to replace engineering-grade railway inspection
+                systems.
+            </p>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="card">
+
+            <h2>Inspection Pipeline</h2>
+
+            <div class="pipeline">
+
+                <div>Railway Images / Video</div>
+
+                <div>Frame Extraction</div>
+
+                <div>YOLO26n Detection</div>
+
+                <div>Fastener Classification</div>
+
+                <div>Defect Analysis</div>
+
+                <div>Inspection Recording</div>
+
+                <div>Dashboard / Report</div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <section>
+
+        <div class="card">
+
+            <h2>Model Performance</h2>
+
+            <div class="metrics">
+
+                <div class="metric">
+                    <strong>94.1%</strong>
+                    Precision
+                </div>
+
+                <div class="metric">
+                    <strong>88.8%</strong>
+                    Recall
+                </div>
+
+                <div class="metric">
+                    <strong>94.5%</strong>
+                    mAP@50
+                </div>
+
+                <div class="metric">
+                    <strong>70.7%</strong>
+                    mAP@50-95
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section>
+
+        <div class="card">
+
+            <h2>RFDD Dataset</h2>
+
+            <p>
+                The Railway Fastener Defect Dataset (RFDD) contains railway
+                fastener images covering six condition classes.
+            </p>
+
+            <br>
+
+            <ul>
+                <li>Deformed</li>
+                <li>Fractured</li>
+                <li>Missing</li>
+                <li>Inverted</li>
+                <li>Normal</li>
+                <li>Displaced</li>
+            </ul>
+
+        </div>
+
+    </section>
+
+
+    <section>
+
+        <div class="card">
+
+            <h2>Project Resources</h2>
+
+            <div class="links">
+
+                <a href="outputs/ITMS_Dashboard.html">
+                    Open ITMS Dashboard
+                </a>
+
+                <a href="docs/ITMS_Final_Project_Report_Complete.pdf">
+                    Project Report
+                </a>
+
+                <a href="docs/ITMS_Project_Presentation.pptx">
+                    Presentation
+                </a>
+
+                <a href="docs/ITMS_Viva_and_Project_Defense_Preparation.pdf">
+                    Viva Preparation
+                </a>
+
+                <a href="demo/ITMS_inspection_browser.mp4">
+                    Inspection Demo
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section>
+
+        <div class="card">
+
+            <h2>Technologies</h2>
+
+            <p>
+                Python · YOLO26n · Ultralytics · OpenCV · NumPy ·
+                HDF5 · HTML · JavaScript
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section>
+
+        <div class="card">
+
+            <h2>Limitations & Future Scope</h2>
+
+            <ul>
+                <li>Prototype uses image/video-based computer vision.</li>
+                <li>It does not perform complete railway track geometry measurement.</li>
+                <li>It does not replace certified railway inspection equipment.</li>
+                <li>Future work can integrate real-time camera systems and additional sensors.</li>
+                <li>Further optimization can improve real-time deployment performance.</li>
+            </ul>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div class="container">
+        Development of Indigenous Contactless Integrated Track Monitoring Systems (ITMS) for Track Recording
+        <br>
+        CSE 471 · Deep Learning for Computer Vision
+    </div>
+
+</footer>
+
+</body>
+</html>
